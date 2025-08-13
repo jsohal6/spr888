@@ -26,7 +26,7 @@ In this scenario, the user can execute system commands directly via a crafted UR
 
 **Flag:**
 ```
-FLAG{rce-php}
+flag{rce-php}
 ```
 
 ---
@@ -65,7 +65,7 @@ if (isset($_GET['cmd'])) {
 
 ### 4. flag.txt
 ```
-FLAG{rce-php}
+flag{rce-php}
 ```
 
 ### 5. Build and Run
