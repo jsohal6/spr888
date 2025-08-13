@@ -30,7 +30,7 @@ There are multiple ways to exploit this vulnerability, but the recommended appro
 
 **Flag:**
 ```
-FLAG{drupal-rce-works}
+flag{drupal-rce-works}
 ```
 
 ---
