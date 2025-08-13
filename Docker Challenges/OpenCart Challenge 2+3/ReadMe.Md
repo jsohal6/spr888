@@ -31,7 +31,7 @@ The purpose of this challenge is to use a brute force attack on the `mysql:5.7` 
 
 **Flag:**  
 ```
-FLAG{BruteforceDB}
+flag{BruteforceDB}
 ```
 
 ---
@@ -114,7 +114,7 @@ curl "http://localhost:8086/index.php?route=product/search&search=UNION+SELECT+1
 
 **Flag:**
 ```html
-<!-- FLAG{opencart-sqli-ctf-flag} -->
+<!-- flag{opencart-sqli-ctf-flag} -->
 ```
 
 ---
