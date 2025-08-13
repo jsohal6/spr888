@@ -22,7 +22,7 @@ This challenge demonstrates how to exploit the **Shellshock vulnerability (CVE-2
 
 **Flag:**
 ```
-FLAG{pwned_by_shellshock}
+flag{pwned_by_shellshock}
 ```
 
 ---
@@ -47,7 +47,7 @@ docker-compose up -d
 ### 4. Add the Flag
 Place your flag in the desired directory within the container, for example:
 ```bash
-echo "FLAG{pwned_by_shellshock}" > /var/www/html/flag.txt
+echo "flag{pwned_by_shellshock}" > /var/www/html/flag.txt
 ```
 
 ### 5. Test the Exploit
