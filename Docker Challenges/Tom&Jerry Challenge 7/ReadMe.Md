@@ -45,7 +45,7 @@ http://localhost:8010/shell.jsp?cmd=cat%20/usr/local/tomcat/webapps/ROOT/flag.tx
 
 **Flag:**
 ```
-Flag{tomcat_rce_success}
+flag{tomcat_rce_success}
 ```
 
 ---
@@ -80,7 +80,7 @@ docker exec -it <container_id> /bin/bash
 ```
 Create the flag file:
 ```bash
-echo "Flag{tomcat_rce_success}" > /usr/local/tomcat/webapps/ROOT/flag.txt
+echo "flag{tomcat_rce_success}" > /usr/local/tomcat/webapps/ROOT/flag.txt
 ```
 
 ---
