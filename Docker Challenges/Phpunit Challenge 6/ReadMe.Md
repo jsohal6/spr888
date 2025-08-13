@@ -47,7 +47,7 @@ docker-compose up -d
 
 ### 4. Create the Flag
 ```bash
-docker exec phpunit_web_1 sh -c "echo 'FLAG{phpunit_pwned_rce}' > /var/www/html/flag.txt"
+docker exec phpunit_web_1 sh -c "echo 'flag{phpunit_pwned_rce}' > /var/www/html/flag.txt"
 ```
 
 ---
