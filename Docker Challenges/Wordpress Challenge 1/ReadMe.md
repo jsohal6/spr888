@@ -35,7 +35,7 @@ Recreating this challenge is straightforward but involves several steps:
 - In one of the posts, hide the flag using the HTML or code section.
 - Add a comment containing the flag:
   ```html
-  <!-- FLAG{Wordpress-exploit-flag} -->
+  <!-- flag{Wordpress-exploit-flag} -->
   ```
 
 ### 3. Create Docker Image and Push to Docker Hub
