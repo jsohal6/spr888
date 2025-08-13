@@ -60,7 +60,7 @@ docker-compose up -d
 ```bash
 docker ps
 docker exec -it <container_id> /bin/bash
-echo "FLAG{STRUCK_BY_STRUTS2}" > /usr/local/tomcat/webapps/ROOT/flag.txt
+echo "flag{STRUCK_BY_STRUTS2}" > /usr/local/tomcat/webapps/ROOT/flag.txt
 ```
 
 ---
