@@ -23,7 +23,7 @@ This challenge teaches the user about **CVE-2017-9841**, a vulnerability in PHPU
 
 **Flag:**
 ```
-FLAG{phpunit_pwned_rce}
+flag{phpunit_pwned_rce}
 ```
 
 ---
